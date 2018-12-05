@@ -1,0 +1,30 @@
+1.静态资源的访问
+    A.所有/webjars/**，都去classpath:/META-INF/resources/webjars/**
+    webjars:以jar包的方式引入静态资源，资源可以通过maven配置添加
+
+    B. /** 访问当前项目的任何资源
+        classpath:/META-INF/resources
+        classpath:/resources
+        classpath:/static
+        classpath:/public
+        /
+
+    C.欢迎页   静态资源文件夹下的index.html
+
+    D.图标    **/favicon.ico  静态路径下的favicon.ico
+
+2.模板引擎  thymeleaf
+    A.导入命名空间
+        <html lang="en" xmlns:th="http://www.thymeleaf.org">
+    B.使用标签
+        th:
+
+3.国际化
+    A.  application.properties下
+        spring.messages.basename=i18n.login
+    B.  #{}用户配置国际信息
+    C.  乱码需要设置文件编码
+
+    D.若要根据链接携带的参数变化，需要配置自己的地域解析器
+
+
